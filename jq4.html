@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Demo</title>
+	</head>
+	<style>
+		div{
+			border: 3px solid black;
+			padding:10px;
+		}
+		.div1{
+			margin:0px 10px;
+			width:100px;
+			float:left;
+			margin-left:50px;
+		}
+	</style>
+	
+	<body>
+		<div style="background-color:25D366; width:80%; margin: 30px auto;">
+			<h3>Outer</h3>
+			<div style="background-color:3b5999;">
+				<h3>Inner</h3>
+				<div style="background-color:25D366; height:150px">
+					<h3>Super Inner</h3>
+				
+					<div id="id1" class="div1" style="background-color:3b5999;">
+						<h3 align="center">A</h3>
+					</div>
+						<div style="background-color:3b5999;" class="div1">
+							<h3 align="center">B</h3>
+						</div>
+						<div style="background-color:3b5999;" class="div1">
+							<h3 align="center">C</h3>
+						</div>
+				</div>
+			</div>
+		</div>
+		<button id="b1" style="margin-left:550px;">Animate</button>
+		<button id="b2">Stop</button>
+		
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					$(".div1").animate({
+						width:"250px"
+					},3000);
+				});
+				
+				$("#b2").click(function(){
+					$("#id1").stop();
+				});
+			});
+		</script>
+	</body>
+</html>
